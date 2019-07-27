@@ -19,7 +19,8 @@ def remove_strawberry(contacts)
     if person == "Freddy Mercury"
     data.each do |attribute, value|
       if attribute == :favorite_ice_cream_flavors
-        value.shift
+        value.delete_if {|flavor| flavor == "strawberry"}
+        #value.shift
     #binding.pry
         end
       end
